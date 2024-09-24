@@ -1,36 +1,8 @@
-class Book{
-String? title;
-String? author;
-int? publicationYear;
-int pagesRead=0;
-static int totalBook=0;
-Book(this.title,this.author,this.publicationYear){
-  totalBook++;
-}
-read(int pages){
-  pagesRead=pagesRead+pages;
-}
-getPagesRead(){
-  return pagesRead;
-}
-getTitle(){
-  return title;
-}
-getAuthor(){
-  return author;
-}
-getPublicationYear(){
-  return publicationYear;
-}
-getBookAge(){
-  int currentYear=DateTime.now().year;
-  return currentYear-publicationYear!;
-}
-}
+import 'class_Of_Assignment1.dart';
 void main(){
-  Book b1=Book('Client Server Computing','Lalit Kumar',2012);
-  Book b2=Book('Mobile Computing', 'Vinay Kumar',2011);
-  Book b3=Book(' Computer Networks', 'Sharad Kumar',2010);
+  Book b1=Book('Client Server Computing','Lalit Kumar',2012,5);
+  Book b2=Book('Mobile Computing', 'Vinay Kumar',2011,6);
+  Book b3=Book(' Computer Networks', 'Sharad Kumar',2010,4);
   b1.read(20);
   b2.read(5);
   b3.read(6);
